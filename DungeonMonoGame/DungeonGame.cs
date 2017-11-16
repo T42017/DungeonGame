@@ -100,11 +100,14 @@ namespace DungeonMonoGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _dungeonTile = Content.Load<Texture2D>("dungeon");
+
+            ScreenManager.Instance.LoadContent(Content);
         }
 
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            ScreenManager.Instance.UnloadContent();
+
         }
 
         protected override void Update(GameTime gameTime)
@@ -167,6 +170,8 @@ namespace DungeonMonoGame
             _viewPortPositions[17].Index = _position + _direction.Rotate90DegreesLeft();
             //Position R
             _viewPortPositions[18].Index = _position + _direction.Rotate90DegreesRight();
+
+            ScreenManager.Instance.Update(gameTime);
             
             base.Update(gameTime);
         }
@@ -193,6 +198,7 @@ namespace DungeonMonoGame
                 _spriteBatch.Draw(_dungeonTile, vp.DrawPosition*Scale, rect, Color.White, 0f, Vector2.Zero, Scale,
                     SpriteEffects.None, 0f);
             }
+            
             _spriteBatch.End();
 
             base.Draw(gameTime);
