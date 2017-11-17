@@ -8,5 +8,7 @@ namespace DungeonMonoGame
 {
     class Global
     {
+        public static int ScreenWidth = 1500;
+        public static int ScreenHeight = 1000;
     }
 }

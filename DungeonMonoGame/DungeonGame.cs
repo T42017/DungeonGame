@@ -185,7 +185,7 @@ namespace DungeonMonoGame
 
             _spriteBatch.Draw(_dungeonTile, Vector2.Zero, _rectVoid, Color.White, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
             _spriteBatch.Draw(_dungeonTile, _positionVoid * Scale, _rectVoid, Color.White, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
-            _spriteBatch.Draw(_dungeonTile, _positionVoid * 8 * Scale, _rectVoid, Color.White, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
+            _spriteBatch.Draw(_dungeonTile, _positionVoid * 2 * Scale, _rectVoid, Color.White, 0f, Vector2.Zero, Scale, SpriteEffects.None, 0f);
 
             foreach (var vp in _viewPortPositions)
             {
