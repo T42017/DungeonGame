@@ -15,6 +15,7 @@ namespace DungeonMonoGame
         public int MaxHealth { get; set; }
         public int Attack { get; set; }
         public int HitRate { get; set; }
+        public int Gold { get; set; }
 
         /* private Texture2D playerTexture;
          private Texture2D healthTexture; */
@@ -26,6 +27,7 @@ namespace DungeonMonoGame
             MaxHealth = Health;
             Attack = 1;
             HitRate = 50;
+            Gold = 0;
 
 
 
