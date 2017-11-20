@@ -12,6 +12,31 @@ namespace DungeonMonoGame
 {
     class Enemies
     {
-        
+        public int health = 10;
+        public int damage = 2;
+        public int attackRate = 8;
+
+        private Texture2D enemyTexture;
+
+        public void LoadContent()
+        {
+
+        }
+
+        public void UnloadContent()
+        {
+
+        }
+
+        public void Update(GameTime game)
+        {
+
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+
+        }
+
     }
 }

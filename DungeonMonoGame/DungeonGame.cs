@@ -40,6 +40,10 @@ namespace DungeonMonoGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
+            this._graphics.PreferredBackBufferWidth = 1800;
+            
+            this._graphics.PreferredBackBufferHeight = 1000;
+
             Components.Add(new KeyboardComponent(this));
         }
 
