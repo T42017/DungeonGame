@@ -15,6 +15,7 @@ namespace DungeonMonoGame
             public int Attack { get; set; }
             public int HitRate { get; set; }
             public int GoldDrop { get; set; }
+            public int Exp { get; set; }
 
         public Enemy(Game game)
             {
@@ -24,6 +25,7 @@ namespace DungeonMonoGame
                 Attack = 1;
                 HitRate = 60;
                 GoldDrop = 10;
+                Exp = 1;
 
 
 
