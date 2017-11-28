@@ -58,10 +58,8 @@ namespace DungeonMonoGame
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            
-            this._graphics.PreferredBackBufferWidth = 1350;
 
-            playerTexture = Content.Load<Texture2D>("PlayerPic");
+            this._graphics.PreferredBackBufferWidth = 1350;
 
             this._graphics.PreferredBackBufferHeight = 800;
 
@@ -115,7 +113,9 @@ namespace DungeonMonoGame
             _viewPortPositions.Add(new ViewPortPositions() {DrawPosition = new Vector2(0, 0), SourceRect = rectLeft});
             // Position R
             _viewPortPositions.Add(new ViewPortPositions() {DrawPosition = new Vector2(40, 0), SourceRect = rectRight});
-            
+
+            Components.Add(new PlayerStatus(this));
+
             base.Initialize();
         }
 
@@ -125,6 +125,8 @@ namespace DungeonMonoGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             _dungeonTile = Content.Load<Texture2D>("dungeon");
+
+            playerTexture = Content.Load<Texture2D>("PlayerPic");
         }
 
         protected override void UnloadContent()
