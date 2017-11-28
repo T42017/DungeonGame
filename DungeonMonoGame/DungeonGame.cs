@@ -19,7 +19,7 @@ namespace DungeonMonoGame
 
         private const int MapWidth = 20;
         private const int MapHeight = 20;
-        private const float Scale = 15f;
+        private const float Scale = 25f;
 
         private readonly int[,] _map = 
         {
@@ -49,6 +49,10 @@ namespace DungeonMonoGame
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            
+            this._graphics.PreferredBackBufferWidth = 1350;
+
+            this._graphics.PreferredBackBufferHeight = 800;
 
             Components.Add(new KeyboardComponent(this));
         }
@@ -183,7 +187,7 @@ namespace DungeonMonoGame
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             _spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend,
                 SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullNone);
