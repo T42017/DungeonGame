@@ -11,6 +11,15 @@ namespace DungeonMonoGame
         private SpriteBatch _spriteBatch;
         private Texture2D _dungeonTile;
 
+        public int Health;
+        public string Name;
+        public int Money;
+        public int AttackDamage;
+        public int MaxHealth;
+        public int Experience;
+
+        private Texture2D playerTexture;
+
         private Vector2Int _position = new Vector2Int(1, 1);
         private Vector2Int _direction = new Vector2Int(0, -1);
         readonly List<ViewPortPositions> _viewPortPositions = new List<ViewPortPositions>();
@@ -51,6 +60,8 @@ namespace DungeonMonoGame
             Content.RootDirectory = "Content";
             
             this._graphics.PreferredBackBufferWidth = 1350;
+
+            playerTexture = Content.Load<Texture2D>("PlayerPic");
 
             this._graphics.PreferredBackBufferHeight = 800;
 
