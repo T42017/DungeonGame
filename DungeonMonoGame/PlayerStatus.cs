@@ -8,5 +8,13 @@ namespace DungeonMonoGame
 {
     class PlayerStatus
     {
+        public int Health;
+        public string Name;
+        public int Money;
+        public int AttackDamage;
+        public int MaxHealth;
+        public int Experience;
+
     }
+
 }
