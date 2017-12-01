@@ -59,7 +59,7 @@ namespace DungeonMonoGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
-            this._graphics.PreferredBackBufferWidth = 1350;
+            this._graphics.PreferredBackBufferWidth = 1700;
 
             this._graphics.PreferredBackBufferHeight = 800;
 
