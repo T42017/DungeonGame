@@ -33,7 +33,7 @@ namespace DungeonMonoGame
         private readonly int[,] _map = 
         {
             {2,2,1,2,1,2,1,2,1,2,2,2,1,2,1,2,1,2,1,2},
-            {1,0,0,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,2},
+            {1,0,4,0,0,0,0,0,0,0,3,0,0,0,0,0,0,0,0,2},
             {2,0,0,2,1,3,1,2,1,2,2,0,0,2,1,3,1,2,1,2},
             {1,0,1,2,1,0,2,0,0,1,2,0,0,2,1,0,1,2,1,2},
             {2,0,2,0,2,0,1,0,0,2,2,0,0,2,1,0,1,2,1,2},
@@ -124,7 +124,7 @@ namespace DungeonMonoGame
             // Create a new SpriteBatch, which can be used to draw textures.
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            _dungeonTile = Content.Load<Texture2D>("dungeon");
+            _dungeonTile = Content.Load<Texture2D>("NEWdungeon");
 
             playerTexture = Content.Load<Texture2D>("PlayerPic");
         }
